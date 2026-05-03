@@ -72,10 +72,18 @@
 
 <section id="about" class="container mt-5">
   <h2>About This Sprint</h2>
-  <p class="lead">
-  This 4-week sprint is focused on building practical front-end skills using HTML,
-  CSS, Bootstrap 4.4.1, JavaScript, GitHub, and deployment workflows.
-</p>
+    <p class="lead">
+      This 4-week sprint is focused on building practical front-end skills using HTML,
+      CSS, Bootstrap 4.4.1, JavaScript, GitHub, and deployment workflows.
+    </p>
+
+    <button id="progressBtn" class="btn btn-outline-primary mt-3">
+      Show Week 2 Progress
+    </button>
+
+    <div id="progressSummary" class="alert alert-success mt-3 d-none" role="alert">
+      Week 2 progress: Added navigation links, portfolio sections, Bootstrap badges, list groups, and a basic JavaScript interaction.
+    </div>
 </section>
 
 <section id="skills" class="container mt-5">
@@ -115,6 +123,20 @@
 </footer>
 
 <!-- JS dependencies (Bootstrap 4.4.1) -->
+<script>
+  const progressBtn = document.getElementById('progressBtn');
+  const progressSummary = document.getElementById('progressSummary');
+
+  progressBtn.addEventListener('click', function () {
+    progressSummary.classList.toggle('d-none');
+
+    if (progressSummary.classList.contains('d-none')) {
+      progressBtn.textContent = 'Show Week 2 Progress';
+    } else {
+      progressBtn.textContent = 'Hide Week 2 Progress';
+    }
+  });
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
