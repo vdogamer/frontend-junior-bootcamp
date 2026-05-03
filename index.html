@@ -98,6 +98,26 @@
   <h2>Contact</h2>
 </section>
 
+<form id="contactForm" class="mt-3">
+  <div class="form-group">
+    <label for="nameInput">Name</label>
+    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+  </div>
+
+  <div class="form-group">
+    <label for="emailInput">Email</label>
+    <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+  </div>
+
+  <div class="form-group">
+    <label for="messageInput">Message</label>
+    <textarea class="form-control" id="messageInput" rows="3" placeholder="Write a short message"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <div id="formAlert" class="alert mt-3 d-none" role="alert"></div>
+</form>
+
 <span class="badge badge-primary mr-2 mb-2">HTML</span>
 <span class="badge badge-secondary mr-2 mb-2">CSS</span>
 <span class="badge badge-success mr-2 mb-2">Bootstrap 4.4.1</span>
@@ -135,6 +155,30 @@
     } else {
       progressBtn.textContent = 'Hide Week 2 Progress';
     }
+  });
+
+  const contactForm = document.getElementById('contactForm');
+  const formAlert = document.getElementById('formAlert');
+
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('nameInput').value.trim();
+    const email = document.getElementById('emailInput').value.trim();
+    const message = document.getElementById('messageInput').value.trim();
+
+    formAlert.classList.remove('d-none', 'alert-success', 'alert-danger');
+
+    if (name === '' || email === '' || message === '') {
+      formAlert.classList.add('alert-danger');
+      formAlert.textContent = 'Please complete all fields before submitting.';
+      return;
+    }
+
+    formAlert.classList.add('alert-success');
+    formAlert.textContent = 'Success! Your message has been validated locally.';
+
+    contactForm.reset();
   });
 </script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
