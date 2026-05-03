@@ -115,6 +115,7 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
+  <div id="formAlert" class="alert mt-3 d-none" role="alert"></div>
 </form>
 
 <span class="badge badge-primary mr-2 mb-2">HTML</span>
@@ -154,6 +155,30 @@
     } else {
       progressBtn.textContent = 'Hide Week 2 Progress';
     }
+  });
+
+  const contactForm = document.getElementById('contactForm');
+  const formAlert = document.getElementById('formAlert');
+
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('nameInput').value.trim();
+    const email = document.getElementById('emailInput').value.trim();
+    const message = document.getElementById('messageInput').value.trim();
+
+    formAlert.classList.remove('d-none', 'alert-success', 'alert-danger');
+
+    if (name === '' || email === '' || message === '') {
+      formAlert.classList.add('alert-danger');
+      formAlert.textContent = 'Please complete all fields before submitting.';
+      return;
+    }
+
+    formAlert.classList.add('alert-success');
+    formAlert.textContent = 'Success! Your message has been validated locally.';
+
+    contactForm.reset();
   });
 </script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
