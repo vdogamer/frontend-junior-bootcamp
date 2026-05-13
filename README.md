@@ -1,65 +1,38 @@
-# Frontend Junior Developer - 4 Week Sprint + GitHub Tracking Kit
+# Front-End Junior Bootcamp
 
-This kit is designed to help you show visible progress toward a junior front-end / web developer standard in **4 focused weeks**, with a **review-prep buffer week** before an early-May manager review.
+This repository documents a 4-week front-end development sprint focused on HTML, CSS, Bootstrap 4.4.1, JavaScript, GitHub workflow, and deployment.
 
-It includes a **Bootstrap 4.4.1 track** so you can move faster on layout and UI while still learning the underlying HTML, CSS, JavaScript, accessibility, deployment, and GitHub workflow.
+## Live Site
 
-## Recommended repo setup
+https://vdogamer.github.io/frontend-junior-bootcamp/
 
-Create a repository named something like:
+## Skills Practiced
 
-- `frontend-junior-bootcamp`
-- `frontend-upskilling-2026`
-- `frontend-growth-plan`
+- Semantic HTML
+- Bootstrap 4.4.1 layout and components
+- Responsive design
+- JavaScript DOM interaction
+- Form validation
+- GitHub branches, commits, issues, and pull requests
+- GitHub Pages deployment
 
-## Suggested structure
+## Weekly Progress
 
-```text
-.
-├── .github
-│   ├── ISSUE_TEMPLATE
-│   │   ├── learning-task.md
-│   │   ├── project-story.md
-│   │   └── weekly-retrospective.md
-│   └── PULL_REQUEST_TEMPLATE.md
-├── docs
-│   ├── curriculum-4-weeks.md
-│   ├── github-project-setup.md
-│   ├── bootstrap-4.4.1-study-map.md
-│   ├── review-prep-checklist.md
-│   ├── weekly-checkin-template.md
-│   ├── evidence-log-template.md
-│   ├── definition-of-done.md
-│   └── manager-status-update-template.md
-├── projects
-│   ├── project-01-bootstrap-landing-page
-│   ├── project-02-js-directory-or-dashboard
-│   └── project-03-review-capstone
-└── README.md
-```
+### Week 1
+Built and deployed a responsive Bootstrap 4.4.1 landing page.
 
-## Weekly operating rhythm
+### Week 2
+Added navigation links, portfolio sections, Bootstrap badges, and a JavaScript progress toggle.
 
-- Monday: create issues for the week and estimate effort
-- Tuesday-Thursday: build from feature branches
-- Friday: deploy, run Lighthouse, open PR, write retrospective, update evidence
-- Saturday or buffer time: fix bugs or polish docs
+### Week 3
+Added a Bootstrap contact form with JavaScript validation and feedback alerts.
 
-## Evidence you should capture every week
+### Week 4
+Polished the capstone site, updated documentation, and prepared final review evidence.
 
-- deployed URL
-- screenshot or GIF
-- Lighthouse result
-- what you learned
-- what broke
-- next week's plan
+## Review Evidence
 
-## Minimum Git hygiene
-
-- one branch per task
-- one pull request per completed task cluster
-- one issue linked to each PR
-- concise commit messages
-- screenshots in PRs for UI changes
-
-Start with `docs/curriculum-4-weeks.md`, then use `docs/bootstrap-4.4.1-study-map.md` as your framework checklist.
+- Live deployed site
+- GitHub issues for weekly progress
+- Pull requests and commit history
+- Screenshots added to weekly issues
